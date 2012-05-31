@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution IPC-OpenAny,
-version 0.003:
+version 0.004:
 
   Run a process with control over any FDs it may use.
 

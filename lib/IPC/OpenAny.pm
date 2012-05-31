@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package IPC::OpenAny;
 {
-  $IPC::OpenAny::VERSION = '0.003';
+  $IPC::OpenAny::VERSION = '0.004';
 }
 
 # ABSTRACT: Run a process with control over any FDs it may use.
@@ -136,7 +136,7 @@ IPC::OpenAny - Run a process with control over any FDs it may use.
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 

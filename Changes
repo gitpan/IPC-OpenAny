@@ -1,6 +1,13 @@
 Changelog for IPC-OpenAny
 
-0.003 2012-05-30T22:41:33
+0.004 2012-05-31T14:26:01
+ [Stephen R. Scaffidi <stephen@scaffidi.net>]
+ - removed unnecessary diag from test
+
+ - more tests
+
+
+v0.003 2012-05-30T22:41:27
  [Stephen R. Scaffidi <stephen@scaffidi.net>]
  - ready for release
 
