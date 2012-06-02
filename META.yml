@@ -27,4 +27,7 @@ requires:
   parent: 0
   strict: 0
   warnings: 0
-version: 0.004
+resources:
+  bugtracker: https://github.com/Hercynium/IPC-OpenAny/issues
+  repository: git://github.com/Hercynium/IPC-OpenAny.git
+version: 0.005

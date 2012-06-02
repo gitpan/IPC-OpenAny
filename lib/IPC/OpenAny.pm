@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package IPC::OpenAny;
 {
-  $IPC::OpenAny::VERSION = '0.004';
+  $IPC::OpenAny::VERSION = '0.005';
 }
 
 # ABSTRACT: Run a process with control over any FDs it may use.
@@ -30,7 +30,7 @@ sub run {
   my $env      = delete $opt{env};
   my $pwd      = delete $opt{pwd};
   my $pid      = __fork_cmd($cmd_spec, $fds, $env, $pwd);
-  wait if $opt{wait};
+  waitpid $pid, 0 if $opt{wait};
   return $pid;
 }
 
@@ -136,7 +136,7 @@ IPC::OpenAny - Run a process with control over any FDs it may use.
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -175,8 +175,8 @@ version 0.004
 
 =head1 DESCRIPTION
 
-B<<THIS SOFTWARE IS STILL UNDER DEVELOPMENT PLEASE REPORT ANY BUGS, COMMENTS,
-OR FEATURE REQUESTS>>
+B<THIS SOFTWARE IS STILL UNDER DEVELOPMENT PLEASE REPORT ANY BUGS, COMMENTS,
+OR FEATURE REQUESTS>
 
 In the spirit of L<IPC::Open2> and L<IPC::Open3>, which give you 2 and 3 handles
 to a child process, IPC::OpenAny makes it easy to start a process with any
@@ -233,13 +233,32 @@ method above. It takes the exact same parameters.
 
 =head1 SEE ALSO
 
-IPC::Open2
+=over 4
 
-IPC::Open3
+=item *
 
-IPC::Run
+L<IPC::Open2>
 
-IPC::Cmd
+=item *
+
+L<IPC::Open3>
+
+=item *
+
+L<IPC::Run>
+
+=item *
+
+L<IPC::Cmd>
+
+=back
+
+=head1 CAVEATS
+
+May not work on Win32, and I don't have a windows box with which to
+develop and test it. Patches welcome!
+
+As usual, please report any other issues you may encounter!
 
 =head1 AUTHOR
 

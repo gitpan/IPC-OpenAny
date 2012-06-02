@@ -1,6 +1,17 @@
 Changelog for IPC-OpenAny
 
-0.004 2012-05-31T14:26:01
+0.005 2012-06-02T00:16:54
+ [Stephen R. Scaffidi <stephen@scaffidi.net>]
+ - added caveats section to pod
+
+ - added dzil plugin for readme from pod and tweaks to pod
+
+ - now using GitHub::Meta dzil plugin
+
+ - use waitpid instead of wait
+
+
+v0.004 2012-05-31T14:25:55
  [Stephen R. Scaffidi <stephen@scaffidi.net>]
  - removed unnecessary diag from test
 
